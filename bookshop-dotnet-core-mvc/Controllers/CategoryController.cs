@@ -53,5 +53,16 @@ namespace bookshop_dotnet_core_mvc.Controllers
 
 			return View(categoryFromDb);
 		}
+		[HttpPost]
+		public IActionResult Edit(Category obj)
+		{
+			if (ModelState.IsValid)
+			{
+				_db.Categories.Update(obj);
+				_db.SaveChanges();
+				return RedirectToAction("Index");
+			}
+			return View();
+		}
 	}
 }
