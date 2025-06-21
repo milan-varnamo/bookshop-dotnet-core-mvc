@@ -1,4 +1,4 @@
-namespace bookshop_dotnet_core_mvc.Models
+namespace Bookshop.Models
 {
     public class ErrorViewModel
     {

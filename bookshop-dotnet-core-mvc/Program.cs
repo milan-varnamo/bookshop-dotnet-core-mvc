@@ -1,4 +1,4 @@
-using bookshop_dotnet_core_mvc.Data;
+using Bookshop.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

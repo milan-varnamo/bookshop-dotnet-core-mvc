@@ -1,5 +1,5 @@
-﻿using bookshop_dotnet_core_mvc.Data;
-using bookshop_dotnet_core_mvc.Models;
+﻿using Bookshop.DataAccess.Data;
+using Bookshop.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace bookshop_dotnet_core_mvc.Controllers
