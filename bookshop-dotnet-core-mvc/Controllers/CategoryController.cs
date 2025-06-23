@@ -3,7 +3,7 @@ using Bookshop.DataAccess.Repository.IRepository;
 using Bookshop.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace bookshop_dotnet_core_mvc.Controllers
+namespace Bookshop.Controllers
 {
     public class CategoryController : Controller
     {
