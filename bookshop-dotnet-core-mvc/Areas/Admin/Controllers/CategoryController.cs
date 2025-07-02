@@ -3,8 +3,9 @@ using Bookshop.DataAccess.Repository.IRepository;
 using Bookshop.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Bookshop.Controllers
+namespace Bookshop.Areas.Admin.Controllers
 {
+	[Area("Admin")]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
