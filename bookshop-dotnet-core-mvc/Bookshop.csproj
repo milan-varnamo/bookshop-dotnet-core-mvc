@@ -21,8 +21,4 @@
     <ProjectReference Include="..\Bookshop.DataAccess\Bookshop.DataAccess.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
