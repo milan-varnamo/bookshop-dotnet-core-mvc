@@ -86,12 +86,12 @@ namespace Bookshop.Areas.Admin.Controllers
 				if (productVM.Product.Id == 0)
 				{
 					_unitOfWork.Product.Add(productVM.Product);
-					TempData["success"] = "Product created successfully";
+					TempData["success"] = "Product was created successfully";
 				}
 				else
 				{
 					_unitOfWork.Product.Update(productVM.Product);
-					TempData["success"] = "Product updated successfully";
+					TempData["success"] = "Product was updated successfully";
 				}
 
 				_unitOfWork.Save();
@@ -119,6 +119,7 @@ namespace Bookshop.Areas.Admin.Controllers
 			return Json(new {data = objProductList});
 		}
 
+		[HttpDelete]
 		public IActionResult Delete(int? id)
 		{
 			var productToBeDeleted = _unitOfWork.Product.Get(u => u.Id == id);
@@ -138,7 +139,7 @@ namespace Bookshop.Areas.Admin.Controllers
 			_unitOfWork.Product.Remove(productToBeDeleted);
 			_unitOfWork.Save();
 			
-			return Json(new { success = true, message = "Delete Successful" });
+			return Json(new { success = true, message = "Product was deleted successfully" });
 		}
 
 		#endregion
