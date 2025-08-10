@@ -2,6 +2,8 @@
 using Bookshop.DataAccess.Repository.IRepository;
 using Bookshop.Models;
 using Bookshop.Models.ViewModels;
+using Bookshop.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
@@ -9,7 +11,8 @@ using System.Collections.Generic;
 namespace Bookshop.Areas.Admin.Controllers
 {
 	[Area("Admin")]
-    public class ProductController : Controller
+	[Authorize(Roles = SD.Role_Admin)]
+	public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
 		private readonly IWebHostEnvironment _webHostEnvironment;
